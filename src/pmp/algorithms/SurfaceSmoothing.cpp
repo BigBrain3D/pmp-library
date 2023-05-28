@@ -92,8 +92,8 @@ void SurfaceSmoothing::explicit_smoothing(unsigned int iters,
         {
             Point l(0, 0, 0);
 
-            if (!mesh_.is_boundary(v))
-            {
+            //if (!mesh_.is_boundary(v))
+            //{
                 Scalar w(0);
 
                 for (auto h : mesh_.halfedges(v))
@@ -105,7 +105,7 @@ void SurfaceSmoothing::explicit_smoothing(unsigned int iters,
                 }
 
                 l /= w;
-            }
+            //}
 
             laplace[v] = l;
         }
